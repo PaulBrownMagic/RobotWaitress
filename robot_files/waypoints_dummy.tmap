@@ -1,0 +1,128 @@
+node: 
+	ChargingPoint
+	waypoint:
+		0,0,0,0,0,0,0
+	edges:
+		 WayPoint1, undocking
+	vertices:
+		0.250000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.250000,-0.690000
+node: 
+	WayPoint1
+	waypoint:
+		47.8196,33.6038,-3.46945e-18,0,0,0.688762,0.724988
+	edges:
+		 ChargingPoint, docking
+		 WayPoint2, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+		 WayPoint6, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint2
+	waypoint:
+		55.8976,33.1841,3.46945e-18,0,0,-0.368567,0.929601
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+		 WayPoint6, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint3
+	waypoint:
+		41.8196,33.6038,-3.46945e-18,0,0,0.688762,0.724988
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint2, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+		 WayPoint6, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint4
+	waypoint:
+		50.8976,33.1841,3.46945e-18,0,0,-0.368567,0.929601
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint2, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+		 WayPoint6, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint5
+	waypoint:
+		34.8196,33.6038,-3.46945e-18,0,0,0.688762,0.724988
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint2, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint6, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint6
+	waypoint:
+		66.8976,33.1841,3.46945e-18,0,0,-0.368567,0.929601
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint2, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000

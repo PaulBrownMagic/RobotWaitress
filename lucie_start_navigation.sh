@@ -10,6 +10,7 @@ $HEADCAM=True
 $HEADCAM_HOSTNAME=luciel
 $CHESTCAM=True
 $CHESTCAM_HOSTNAME=lucie
+$NAV_CAM=head_xtion
 
 if [ -z $1 ]; then
 echo "This program is for use with TopologicalMapMaker Maps"
@@ -47,10 +48,9 @@ tmux select-window -t $SESSION:1
 tmux split-window -v
 tmux select-pane -t 0
 tmux send-keys "roslaunch mongodb_store mongodb_store.launch db_path:=$DATABASE port:=62345"
-tmux resize-pane -D 30
+tmux resize-pane -D 20
 tmux select-pane -t 1
-# tmux send-keys "robomongo"
-tmux send-keys "ps -a | grep tmux" C-m
+tmux send-keys "robomongo"
 tmux select-pane -t 0
 
 tmux select-window -t $SESSION:2
@@ -75,13 +75,13 @@ tmux send-keys "firefox $HOSTNAME:8090 &"
 tmux select-pane -t 0
 
 tmux select-window -t $SESSION:5
-tmux send-keys "roslaunch strands_bringup strands_navigation.launch with_camera:=True camera:=head_xtion map:=$NAV_MAP with_no_go_map:=False no_go_map:=$ROBOT_FILES/no_go_map.yaml with_mux:=False topological_map:=$WAYPOINTS"
+tmux send-keys "roslaunch strands_bringup strands_navigation.launch with_camera:=True camera:=$NAV_CAM map:=$NAV_MAP with_no_go_map:=False no_go_map:=$ROBOT_FILES/no_go_map.yaml with_mux:=False topological_map:=$WAYPOINTS"
 
 tmux select-window -t $SESSION:6
 tmux split-window -h
 tmux select-pane -t 0
 tmux send-keys "rosrun rviz rviz -d $WAITRESS_HOME/tsc_config.rviz"
-tmux resize-pane -U 20
+tmux resize-pane -U 30
 tmux select-pane -t 1
 tmux send-keys "rosrun topological_navigation nav_client.py WayPoint1"
 tmux select-pane -t 0

@@ -1,0 +1,104 @@
+node: 
+	ChargingPoint
+	waypoint:
+		0,0,0,0,0,0,0
+	edges:
+		 WayPoint1, undocking
+	vertices:
+		0.250000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.250000,-0.690000
+node: 
+	WayPoint1
+	waypoint:
+		1.26098518406,-0.070989678559,0.021,0.0,0.0,0.998038148699,-0.0626087353368
+	edges:
+		 ChargingPoint, docking
+		 WayPoint2, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint2
+	waypoint:
+		1.26098518406,-0.070989678559,0.021,0.0,0.0,0.998038148699,-0.0626087353368
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint3
+	waypoint:
+		1.26098518406,-0.070989678559,0.021,0.0,0.0,0.998038148699,-0.0626087353368
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint2, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint4
+	waypoint:
+		2.97353307716,2.33799971847,0.021,0.0,0.0,0.995794496769,-0.0916150653771
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint2, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint5, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000
+node: 
+	WayPoint5
+	waypoint:
+		2.97353307716,2.33799971847,0.021,0.0,0.0,0.995794496769,-0.0916150653771
+	edges:
+		 WayPoint1, human_aware_navigation
+		 WayPoint2, human_aware_navigation
+		 WayPoint3, human_aware_navigation
+		 WayPoint4, human_aware_navigation
+	vertices:
+		0.690000,0.287000
+		0.287000,0.690000
+		-0.287000,0.690000
+		-0.690000,0.287000
+		-0.690000,-0.287000
+		-0.287000,-0.690000
+		0.287000,-0.690000
+		0.690000,-0.287000

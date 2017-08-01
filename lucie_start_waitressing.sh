@@ -4,24 +4,14 @@
 # assumes the same naming conventions used there.
 # "Usage: ./lucie_start_navigation.sh name_of_topological_map"
 
-"""
-<TODO>
-- [x] Add Twitter Program
-- [x] Source the Catkin for UI
-- [x] Add the UI Program
-- [] Test
-- [] Cry when it doesn't work
-- [] Fix it
-- [] Celebrate with Scone or Brownie or lunch...
-"""
 
 # User defined variables
-$HOSTNAME=localhost
-$HEADCAM=True
-$HEADCAM_HOSTNAME=luciel
-$CHESTCAM=True
-$CHESTCAM_HOSTNAME=lucie
-$NAV_CAM=head_xtion
+HOSTNAME=localhost
+HEADCAM=True
+HEADCAM_HOSTNAME=luciel
+CHESTCAM=True
+CHESTCAM_HOSTNAME=lucie
+NAV_CAM=head_xtion
 
 if [ -z $1 ]; then
 echo "This program is for use with TopologicalMapMaker Maps"

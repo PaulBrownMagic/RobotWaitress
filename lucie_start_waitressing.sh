@@ -4,6 +4,17 @@
 # assumes the same naming conventions used there.
 # "Usage: ./lucie_start_navigation.sh name_of_topological_map"
 
+"""
+<TODO>
+- [x] Add Twitter Program
+- [x] Source the Catkin for UI
+- [x] Add the UI Program
+- [] Test
+- [] Cry when it doesn't work
+- [] Fix it
+- [] Celebrate with Scone or Brownie or lunch...
+"""
+
 # User defined variables
 $HOSTNAME=localhost
 $HEADCAM=True
@@ -35,6 +46,9 @@ tmux new-window -t $SESSION:3 -n 'cameras'
 tmux new-window -t $SESSION:4 -n 'strands_ui'
 tmux new-window -t $SESSION:5 -n 'strands_navigation'
 tmux new-window -t $SESSION:6 -n 'RViz'
+tmux new-window -t $SESSION:7 -n 'tweet'
+tmux new-window -t $SESSION:8 -n 'GUI'
+
 
 tmux select-window -t $SESSION:0
 tmux split-window -h
@@ -85,6 +99,20 @@ tmux resize-pane -U 30
 tmux select-pane -t 1
 tmux send-keys "rosrun topological_navigation nav_client.py WayPoint1"
 tmux select-pane -t 0
+
+tmux select-window -t $SESSION:7
+tmux send-keys "DISPLAY=:0 roslaunch ff_bringup tweet.launch"
+
+tmux select-window -t $SESSION:8
+tmux split-window -h
+tmux select-pane -t 0
+tmux send-keys "rosrun waitress_ui waitress_gui.py"
+tmux resize-pane -U 30
+tmux select-pane -t 1
+tmux send-keys "firefox 0.0.0.0:5000 &"
+tmux select-pane -t 0
+
+
 
 
 # Set default window

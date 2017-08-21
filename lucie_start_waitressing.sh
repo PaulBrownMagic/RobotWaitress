@@ -11,7 +11,6 @@ HEADCAM=True
 HEADCAM_HOSTNAME=luciel
 CHESTCAM=True
 CHESTCAM_HOSTNAME=lucie
-NAV_CAM=head_xtion
 
 if [ -z $1 ]; then
 echo "This program is for use with TopologicalMapMaker Maps"
@@ -79,7 +78,7 @@ tmux send-keys "firefox $HOSTNAME:8090 &"
 tmux select-pane -t 0
 
 tmux select-window -t $SESSION:5
-tmux send-keys "roslaunch strands_bringup strands_navigation.launch with_camera:=True camera:=$NAV_CAM map:=$NAV_MAP with_no_go_map:=False no_go_map:=$ROBOT_FILES/no_go_map.yaml with_mux:=False topological_map:=$WAYPOINTS"
+tmux send-keys "roslaunch strands_bringup strands_navigation.launch with_camera:=head_xtion camera:=$NAV_CAM with_chest_xtion:=True map:=$NAV_MAP with_no_go_map:=False no_go_map:=$ROBOT_FILES/no_go_map.yaml with_mux:=False topological_map:=$WAYPOINTS"
 
 tmux select-window -t $SESSION:6
 tmux split-window -h
